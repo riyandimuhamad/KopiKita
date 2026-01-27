@@ -38,6 +38,26 @@ class MenuController extends Controller
     return redirect()->route('menus.index')->with('success', 'Menu berhasil dihapus!');
 }
 
+// 1. Fungsi untuk menampilkan form edit
+public function edit(Menu $menu)
+{
+    return view('menus.edit', compact('menu'));
+}
+
+// 2. Fungsi untuk menyimpan perubahan
+public function update(Request $request, Menu $menu)
+{
+    $request->validate([
+        'name' => 'required',
+        'price' => 'required|numeric',
+        'category' => 'required',
+        'status' => 'required'
+    ]);
+
+    $menu->update($request->all());
+
+    return redirect()->route('menus.index')->with('success', 'Menu berhasil diperbarui!');
+}
 
 }
 

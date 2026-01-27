@@ -24,3 +24,9 @@ Route::post('/katalog', [MenuController::class, 'store'])->name('menus.store');
 
 // 5. Rute untuk menghapus data
 Route::delete('/katalog/{id}', [MenuController::class, 'destroy'])->name('menus.destroy');
+
+// 6. Rute untuk update data 
+Route::get('/katalog/{menu}/edit', [MenuController::class, 'edit'])->name('menus.edit');
+
+// Memproses perubahan data (menggunakan method PUT)
+Route::put('/katalog/{menu}', [MenuController::class, 'update'])->name('menus.update');

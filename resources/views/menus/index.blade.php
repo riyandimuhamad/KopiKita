@@ -11,7 +11,7 @@
         <div class="max-w-6xl mx-auto flex justify-between items-center">
             <h1 class="text-3xl font-black italic tracking-tighter">KOPIKITA.</h1>
             <div class="space-x-4 font-bold uppercase text-xs">
-                <a href="#" class="bg-orange-700 px-4 py-2 rounded-full hover:bg-orange-600 transition">+ Tambah Menu</a>
+                <a href="{{ route('menus.create') }}" class="bg-orange-700 px-4 py-2 rounded-full hover:bg-orange-600 transition">+ Tambah Menu</a>
             </div>
         </div>
     </nav>

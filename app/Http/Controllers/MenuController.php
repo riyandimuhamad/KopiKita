@@ -27,10 +27,16 @@ class MenuController extends Controller
             'category' => 'required',
         ]);
 
-        Menu::create($request->all())
+        Menu::create($request->all());
 
         return redirect()->route('menus.index')->with('success', 'Menu berhasil ditambah!');
     }
+
+    public function destroy(Menu $menu)
+{
+    $menu->delete();
+    return redirect()->route('menus.index')->with('success', 'Menu berhasil dihapus!');
+}
 
 
 }

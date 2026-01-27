@@ -21,3 +21,6 @@ Route::get('/katalog/create', [MenuController::class, 'create'])->name('menus.cr
 
 // 4. Rute untuk menyimpan data
 Route::post('/katalog', [MenuController::class, 'store'])->name('menus.store');
+
+// 5. Rute untuk menghapus data
+Route::delete('/katalog/{id}', [MenuController::class, 'destroy'])->name('menus.destroy');

@@ -12,5 +12,26 @@ class MenuController extends Controller
     $menus = Menu::all(); //Mengambil semua data menu dari database
         return view('menus.index', compact('menus'));
     }
+
+    public function create()
+    {
+        return view('menus.create');
+    }
+
+    public function store(Request $request)
+    {
+        // Logika untuk menyimpan data ke database
+        $request->validate([
+            'name' => 'required',
+            'price' => 'required',
+            'category' => 'required',
+        ]);
+
+        Menu::create($request->all())
+
+        return redirect()->route('menus.index')->with('success', 'Menu berhasil ditambah!');
+    }
+
+
 }
 

@@ -4,7 +4,7 @@ Aplikasi berbasis web untuk mengelola daftar menu kopi (CRUD) yang dikembangkan 
 
 ---
 
-## Anggota Kelompok
+## Anggota Kelompok 6
 * **Riyandi Muhamad** - [2307006] (Ketua & Backend Integration)
 * **Naylla Azhiza** - [2307002] (UI/UX Designer & Frontend)
 * **Euis Novianti** - [2307021] (Logic Specialist & Validation)
